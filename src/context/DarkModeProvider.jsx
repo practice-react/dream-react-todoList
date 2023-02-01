@@ -6,14 +6,14 @@ const getisDarkMode = () =>
   JSON.parse(localStorage.getItem('darkMode')) ?? false;
 
 export default function DarkModeProvider({ children }) {
-  const [darkMode, setDarkMode] = useState(getisDarkMode());
+  const [isDarkMode, setDarkMode] = useState(getisDarkMode());
   const togleDarkMode = () => {
-    localStorage.setItem('darkMode', `${!darkMode}`);
+    localStorage.setItem('darkMode', `${!isDarkMode}`);
     setDarkMode((mode) => !mode);
   };
 
   return (
-    <DarkModeContext.Provider value={{ darkMode, togleDarkMode }}>
+    <DarkModeContext.Provider value={{ isDarkMode, togleDarkMode }}>
       {children}
     </DarkModeContext.Provider>
   );
