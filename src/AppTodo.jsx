@@ -61,7 +61,7 @@ function App() {
     <section className='todo'>
       <DarkModeProvider>
         <TodoHeader filter={filter} onClick={handleFilter} />
-        <TodoList data={data} onClick={handleList} />
+        <TodoList data={data} onClick={handleList} filter={filter} />
         <TodoInput onSubmit={handleAddTodo} />
       </DarkModeProvider>
     </section>
