@@ -1,0 +1,41 @@
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  padding: 8px 24px;
+  background-color: aliceblue;
+  border-radius: 16px 16px 0 0;
+}
+
+.dark {
+  background-color: #262944;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  font-size: 20px;
+  color: rgb(255, 102, 0);
+}
+
+.filter li {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.clicked {
+  border-bottom: 2px solid black;
+}
+
+.clicked-dark {
+  border-bottom: 2px solid orange;
+}
