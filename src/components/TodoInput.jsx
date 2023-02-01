@@ -5,12 +5,16 @@ import styles from '../styles/TodoInput.module.css';
 export default function TodoInput({ onSubmit }) {
   const darkMode = useContext(DarkModeContext);
 
+  const handleChange = (e) => {
+    console.log(e.target);
+  };
   return (
     <form
       className={`${styles.todoInput} ${
         darkMode.isDarkMode ? styles.dark : ''
       }`}
       onSubmit={onSubmit}
+      onChange={handleChange}
     >
       <input
         type='text'

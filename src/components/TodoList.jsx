@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styles from '../styles/TodoList.module.css';
 import { MdDeleteForever } from 'react-icons/md';
 import { DarkModeContext } from '../context/DarkModeProvider';
@@ -14,13 +14,10 @@ export default function TodoList({ data, filter, onClick }) {
         {data.map(({ id, content, isChecked }) => {
           if (filter === 'active' && isChecked) return;
           if (filter === 'completed' && !isChecked) return;
+
           return (
             <li key={id} data-id={id}>
-              <input
-                type='checkbox'
-                checked={isChecked ? true : false}
-                readOnly
-              ></input>
+              <input type='checkbox' checked={isChecked ? true : false}></input>
               <span className={isChecked ? styles.checked : ''}>{content}</span>
               <button>
                 <MdDeleteForever

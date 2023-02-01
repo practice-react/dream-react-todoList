@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './AppTodo.css';
-
 import { TodoHeader, TodoList, TodoInput } from './components';
 import DarkModeProvider from './context/DarkModeProvider';
 
