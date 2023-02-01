@@ -1,11 +1,28 @@
+:root {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-width: 100vw;
   min-height: 100vh;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgb(25, 25, 91) 35%,
-    rgb(41, 46, 47) 100%
+    rgb(205, 204, 213) 0%,
+    rgb(226, 222, 203) 35%,
+    rgb(181, 180, 157) 100%
   );
+  box-sizing: border-box;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  margin: auto;
+  margin-top: 20%;
+  border-radius: 20px;
+  background-color: white;
 }
