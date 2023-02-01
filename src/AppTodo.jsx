@@ -40,16 +40,16 @@ function App() {
 
   const handleAddTodo = (e) => {
     e.preventDefault();
-    const value = e.target.text.value;
+    const value = e.target.text.value.trim();
 
-    if (value.trim() === '') return;
+    if (value === '') return;
     const addTodo = [
       ...data,
-      { id: Date.now(), content: value.trim(), isChecked: false },
+      { id: Date.now(), content: value, isChecked: false },
     ];
     setData(addTodo);
     localStorage.setItem('todoList', JSON.stringify(addTodo));
-    value = '';
+    e.target.text.value = '';
   };
 
   const handleFilter = (e) => {
