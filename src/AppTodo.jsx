@@ -39,17 +39,19 @@ function App() {
   };
 
   const handleAddTodo = (e) => {
-    e.preventDefalut();
-    const value = e.text.value.trim();
+    e.preventDefault();
+    const value = e.target.text.value;
 
-    if (value === '') return;
+    if (value.trim() === '') return;
     const addTodo = [
       ...data,
-      { id: Date.now(), content: value, isChecked: false },
+      { id: Date.now(), content: value.trim(), isChecked: false },
     ];
     setData(addTodo);
-    localStorage('todoList', addTodo);
+    localStorage.setItem('todoList', JSON.stringify(addTodo));
+    value = '';
   };
+
   const handleFilter = (e) => {
     if (!e.target.matches('ul > li')) return;
     setFilter(e.target.textContent.toLowerCase());
