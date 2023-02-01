@@ -1,0 +1,39 @@
+.todoList {
+  background-color: #fff;
+  height: 75%;
+}
+
+.dark {
+  background-color: #484b68;
+  color: white;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 4px;
+}
+
+span {
+  font-size: 20px;
+  flex-basis: 75%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 4px;
+}
+
+button {
+  padding: 4px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: red;
+}
+
+.checked {
+  text-decoration: line-through;
+}
