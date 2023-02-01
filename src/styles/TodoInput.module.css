@@ -1,0 +1,28 @@
+.todoInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  border-radius: 0 0 16px 16px;
+  background-color: #eff8ff;
+}
+
+.dark {
+  background-color: #262944;
+}
+
+.input {
+  flex-basis: 60%;
+  height: 40px;
+  border-radius: 10px 0 0 10px;
+  text-indent: 8px;
+  font-size: 16px;
+  border: 1px solid rgb(212, 211, 211);
+}
+.add {
+  background-color: orange;
+  height: 44px;
+  width: 20%;
+  border-radius: 0 10px 10px 0;
+  color: white;
+}
